@@ -1,0 +1,26 @@
+// Jobs
+// -----------------------------------------------------------------
+.job {
+    margin-bottom: @px15;
+    padding-bottom: @px15;
+    border-bottom: 1px solid darken(@contentBg, 10%);
+
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: @tablet) {
+
+    .job {
+        float: left;
+        width: 48%;
+        border-bottom: none;
+        
+        &:nth-child(odd) {
+            margin-left: 2%;
+        }
+    }
+
+}

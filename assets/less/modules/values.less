@@ -1,0 +1,17 @@
+// Values
+// -----------------------------------------------------------------
+.values-list {
+    dt {
+        float: left;
+        text-transform: uppercase;
+
+        &:after {
+            content: '\00a0-\00a0';
+            display: inline-block;
+        }
+    }
+
+    dd {
+        margin-bottom: @px8;
+    }
+}
