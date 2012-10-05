@@ -1,5 +1,9 @@
 // Jobs
 // -----------------------------------------------------------------
+.jobs {
+    margin-top: @px30;
+}
+
 .job {
     margin-bottom: @px15;
     padding-bottom: @px15;
@@ -11,15 +15,15 @@
     }
 }
 
-@media only screen and (min-width: @tablet) {
+@media only screen and (min-width: @desktopSmall) {
 
     .job {
         float: left;
-        width: 48%;
+        width: 46%;
         border-bottom: none;
         
-        &:nth-child(odd) {
-            margin-left: 2%;
+        &:nth-child(even) {
+            margin-left: 4%;
         }
     }
 

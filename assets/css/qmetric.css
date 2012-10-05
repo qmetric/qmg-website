@@ -563,6 +563,34 @@ h1 {
   background-color: #e6e6e6;
   margin: 0 0.625em 1.25em;
   border: 8px solid #ffffff;
+  *zoom: 1;
+}
+.content:before,
+.content:after {
+  content: "";
+  display: table;
+}
+.content:after {
+  clear: both;
+}
+.content-media {
+  display: none;
+}
+@media only screen and (min-width: 46.875em) {
+  .content-wrap {
+    float: left;
+    width: 55%;
+  }
+  .content-media {
+    display: block;
+    float: right;
+    margin-top: 2.5em;
+  }
+}
+@media only screen and (min-width: 56.25em) {
+  .content-wrap {
+    width: 64%;
+  }
 }
 .site-header {
   background-color: #162c41;
@@ -718,6 +746,9 @@ h1 {
     margin-top: 0.125em;
   }
 }
+.jobs {
+  margin-top: 1.875em;
+}
 .job {
   margin-bottom: 0.9375em;
   padding-bottom: 0.9375em;
@@ -727,14 +758,14 @@ h1 {
   border-bottom: none;
   padding-bottom: 0;
 }
-@media only screen and (min-width: 46.875em) {
+@media only screen and (min-width: 56.25em) {
   .job {
     float: left;
-    width: 48%;
+    width: 46%;
     border-bottom: none;
   }
-  .job:nth-child(odd) {
-    margin-left: 2%;
+  .job:nth-child(even) {
+    margin-left: 4%;
   }
 }
 .values-list dt {

@@ -5,4 +5,32 @@
     background-color: @contentBg;
     margin: 0 @px10 @px20;
     border: 8px solid @white;
+    .cf;
+}
+
+.content-media {
+    display: none;
+}
+
+@media only screen and (min-width: @tablet) {
+
+    .content-wrap {
+        float: left;
+        width: 55%;
+    }
+
+    .content-media {
+        display: block;
+        float: right;
+        margin-top: @px40;
+    }
+
+}
+
+@media only screen and (min-width: @desktopSmall) {
+
+    .content-wrap {
+        width: 64%;
+    }
+
 }

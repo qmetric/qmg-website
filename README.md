@@ -1,4 +1,4 @@
-qmg-website
+QMetric Website
 ===========
 
-QMetric website
+Visible at http://qmetric.co.uk

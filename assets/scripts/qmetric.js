@@ -24,15 +24,9 @@
         domReady(function() {
 
             var event = ('ontouchstart' in document.documentElement ? 'touchstart:relay(li > a)' : 'click:relay(li > a)');
-            var scroller = new Fx.Scroll(window);
             new TermsLoader('.footer-links', '.hdr-terms-main > a');
 
             document.getElement('.date-year').set('text', new Date().getFullYear());
-            document.getElement('.primary-nav').addEvent(event, function(event, element) {
-                var id = element.get('href').split('#')[1];
-                scroller.toElement(id, 'y');
-                event.preventDefault();
-            });
 
             new MqShowHide('#nav', '.primary-nav', {
                 trigger: {
