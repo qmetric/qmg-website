@@ -819,7 +819,6 @@ h1 {
 }
 @media only screen and (min-width: 46.875em) {
   #google-map {
-    min-width: 100%;
     min-height: 500px;
     border: 1px solid #555555;
   }
