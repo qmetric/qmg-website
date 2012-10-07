@@ -20,7 +20,7 @@ body:after {
     display: none;
   }
 }
-@media all and (min-width: 87.5em) {
+@media all and (min-width: 95em) {
   body:after {
     content: 'desktop';
     display: none;
@@ -44,7 +44,7 @@ body:after {
 .hidden-desktop {
   display: block;
 }
-@media all and (min-width: 37.5em) {
+@media all and (min-width: 46.875em) {
   .visible-phone {
     display: none;
   }
@@ -584,7 +584,7 @@ h1 {
   .content-media {
     display: block;
     float: right;
-    margin-top: 2.5em;
+    margin-top: 2.875em;
   }
 }
 @media only screen and (min-width: 56.25em) {
@@ -805,6 +805,24 @@ h1 {
 }
 .is-term-visible {
   display: block;
+}
+.contact-type {
+  margin-bottom: 1.25em;
+}
+.contact-type .type {
+  font-weight: bold;
+  margin: 0 0 0.1875em 0;
+}
+.contact-type .value {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 46.875em) {
+  #google-map {
+    min-width: 100%;
+    min-height: 500px;
+    border: 1px solid #555555;
+  }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .site-title > a {
