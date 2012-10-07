@@ -10,11 +10,10 @@
     optimize: "uglify",
     preserveLicenseComments: false,
     uglify: {
-        toplevel: true,
         max_line_length: 3500,
         no_copyright: true
     },
-    out: "assets/scripts/qmetric-built.js",
+    out: "assets/scripts/qmetric.min.js",
     name: "qmetric",
     include: ["async"]
 })

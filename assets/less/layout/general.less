@@ -12,6 +12,36 @@
     display: none;
 }
 
+.img {
+    .square(285px);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    
+    &.img-01 {
+        background-image: url("@{imgPath}01.png");
+    }
+
+    &.img-02 {
+        background-image: url("@{imgPath}02.png");
+    }
+
+    &.img-03 {
+        background-image: url("@{imgPath}03.png");
+    }
+
+    &.img-04 {
+        background-image: url("@{imgPath}04.png");
+    }
+
+    &.img-05 {
+        background-image: url("@{imgPath}05.png");
+    }
+
+    &.img-06 {
+        background-image: url("@{imgPath}06.png");
+    }
+}
+
 @media only screen and (min-width: @tablet) {
 
     .content-wrap {
@@ -31,6 +61,14 @@
 
     .content-wrap {
         width: 64%;
+    }
+
+}
+
+@media only screen and (min-width: @desktop) {
+
+    .content-media > .img {
+        display: none;
     }
 
 }

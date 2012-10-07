@@ -8,22 +8,15 @@
         },
         shim: {
             'mootools': {
-               exports: 'MooTools'
+                exports: 'MooTools'
             },
             'mootools-more': {
-               deps: ['mootools'],
-               exports: function(MooTools) {
-                   return MooTools.More
-               }
+                deps: ['mootools'],
+                exports: 'MooTools.More',
+                init: function(MooTools) {
+                    return MooTools.More
+                }
             }
-        },
-        urlArgs: "bust=" +  (new Date()).getTime()
-    });
-
-    // Find out current media query from CSS ftw
-    define('mq', function() {
-        return function() {
-            return window.getComputedStyle(document.body,':after').getPropertyValue('content');
         }
     });
 
@@ -37,20 +30,17 @@
         'domReady',
         'modules/TermsLoader',
         'modules/MqShowHide',
-        'mq',
         'lib/address-bar',
         'lib/orientation-fix'
-    ], function(domReady, TermsLoader, MqShowHide, mq, addressBar, orientationFix) {
+    ], function(domReady, TermsLoader, MqShowHide, addressBar, orientationFix) {
 
         domReady(function() {
 
-            var event = ('ontouchstart' in document.documentElement ? 'touchstart:relay(li > a)' : 'click:relay(li > a)');
             new TermsLoader('.footer-links', '.hdr-terms-main > a');
-
-            document.getElement('.date-year').set('text', new Date().getFullYear());
-
             addressBar();
             orientationFix();
+
+            document.getElement('.date-year').set('text', new Date().getFullYear());
 
             new MqShowHide('#nav', '.primary-nav', {
                 trigger: {
@@ -70,10 +60,9 @@
                 }
             }).hide();
 
-            // Load google maps if above phone
-            if (mq().indexOf('tablet-small') == -1 && mq().indexOf('phone') == -1) {
+            // Load Google Maps above phone and small tablet
+            if (Modernizr.mq('(min-width: 46.875em)')) {
                 require(['gmaps'], function(gmaps) {
-
                     var latlng = new gmaps.LatLng(51.51442, -0.07771);
                     var mapElement = document.getElementById('google-map');
 
@@ -84,10 +73,9 @@
                     });
 
                     new gmaps.Marker({
-                  	    position: latlng,
-                  	    map: map
+                        position: latlng,
+                        map: map
                     });
-
                 });
             }
 
