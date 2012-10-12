@@ -452,7 +452,7 @@ table {
 body {
   font-size: 1em;
   font-family: "HelveticaNeueW01-55Roma", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #6c767f;
+  background-color: #66737f;
   -webkit-font-smoothing: antialiased;
 }
 p,
@@ -519,7 +519,7 @@ h1 {
 }
 @media only screen and (min-width: 46.875em) {
   .hdr-lrg {
-    font-size: 2.5em;
+    font-size: 3.125em;
     border-bottom: 1px solid #999999;
     padding-bottom: 0.3125em;
     -webkit-text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
@@ -528,6 +528,15 @@ h1 {
   }
   .hdr-sub-main {
     font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 78.125em) {
+  .hdr-lrg {
+    font-size: 4.375em;
+    line-height: 60px;
+  }
+  .hdr-sub-main {
+    font-weight: 200;
   }
 }
 .content {
@@ -594,6 +603,11 @@ h1 {
     padding-top: 6.25em;
   }
 }
+@media only screen and (min-width: 46.875em) {
+  .page {
+    padding-top: 5em;
+  }
+}
 @media only screen and (min-width: 56.25em) {
   .content-wrap {
     width: 64%;
@@ -602,6 +616,20 @@ h1 {
 @media only screen and (min-width: 78.125em) {
   .content-media > .img {
     display: none;
+  }
+  .fixed-width {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container {
+    background: url("../images/skyline-full.jpg") center bottom no-repeat fixed;
+    background-size: contain;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .container {
+    background-size: 80%;
   }
 }
 .site-header {
@@ -643,6 +671,14 @@ h1 {
 }
 .site-footer a {
   color: #f1f1f1;
+}
+.site-footer ul {
+  margin: 1em 0;
+  list-style-type: disc;
+  margin-left: 1em;
+}
+.site-footer li {
+  margin-bottom: 0.3125em;
 }
 .primary-nav {
   padding: 0 0.625em 0.3125em;
@@ -760,6 +796,18 @@ h1 {
   .intro p {
     width: 70%;
     background-color: transparent;
+  }
+}
+@media only screen and (min-width: 78.125em) {
+  .intro {
+    background-image: none;
+    width: 500px;
+    margin-top: 80px;
+  }
+  .intro hgroup,
+  .intro p {
+    width: 100%;
+    padding-left: 0;
   }
 }
 .staff dt {

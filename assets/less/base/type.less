@@ -71,7 +71,7 @@ h1 {
 @media only screen and (min-width: @tablet) {
     
     .hdr-lrg {
-        font-size: @px40;
+        font-size: @px50;
         border-bottom: 1px solid @grayLight;
         padding-bottom: @px5;
         .text-shadow(1px 1px 4px rgba(0,0,0,.6));
@@ -81,4 +81,17 @@ h1 {
         font-size: @px24;
     }
     
+}
+
+@media only screen and (min-width: @desktop) {
+
+    .hdr-lrg {
+        font-size: @px60 + @px10;
+        line-height: 60px;
+    }
+    
+    .hdr-sub-main {
+        font-weight: 200;
+    }
+
 }

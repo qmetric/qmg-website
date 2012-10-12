@@ -7,7 +7,7 @@
             Implements: [Options, Events],
             
             options: {
-                sibLingSelector: '.terms-body' ,
+                siblingSelector: '.terms-body' ,
                 loadingClass: 'term-loading',
                 toggleClass: 'is-term-visible'
             },
@@ -18,7 +18,7 @@
                 this.setOptions(options);
                 
                 this.container.addEvent(['click:relay(', this.selector, ')'].join(''), function(event, element) {
-                    var termContainer = element.getParent().getSiblings(this.options.sibLingSelector)[0];
+                    var termContainer = element.getParent().getSiblings(this.options.siblingSelector)[0];
 
                     // Don't load the content more than once
                     (termContainer.getChildren().length > 0) ?
