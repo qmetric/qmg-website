@@ -17,11 +17,29 @@
             color: @white;
             padding: @px15 0;
 
+            &:before {
+                visibility: hidden;
+                opacity: 0;
+                display: inline-block;
+                content: '';
+                margin-right: @px6;
+                .square(8px);
+                background-color: @link;
+                .border-radius(50%);
+            }
+
             &:hover {
                 color: @link;
                 text-decoration: none;
             }
         }
+    }
+}
+
+.nav-active {
+    &:before {
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 }
 

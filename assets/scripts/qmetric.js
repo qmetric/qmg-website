@@ -16,6 +16,10 @@
                 init: function(MooTools) {
                     return MooTools.More
                 }
+            },
+            'modules/ScrollSpy': {
+                deps: ['mootools'],
+                exports: 'moostrapScrollspy'
             }
         }
     });
@@ -30,13 +34,18 @@
         'domReady',
         'modules/TermsLoader',
         'modules/MqShowHide',
+        'modules/ScrollSpy',
         'lib/address-bar',
         'lib/orientation-fix'
-    ], function(domReady, TermsLoader, MqShowHide, addressBar, orientationFix) {
+    ], function(domReady, TermsLoader, MqShowHide, ScrollSpy, addressBar, orientationFix) {
 
         domReady(function() {
 
             new TermsLoader('.footer-links', '.hdr-terms-main > a');
+            new ScrollSpy('nav', {
+                activeClass: 'nav-active'
+            });
+
             addressBar();
             orientationFix();
 
@@ -76,6 +85,13 @@
                         position: latlng,
                         map: map
                     });
+                });
+            }
+            
+            if (!Modernizr.mq('(min-width: 37.5em)')) {
+                var navContainer = document.getElement('.nav-toggle-container');
+                document.getElement('.primary-nav').addEvent('click:relay(a)', function(event) {
+                    navContainer.hide();
                 });
             }
 

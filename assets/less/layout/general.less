@@ -8,6 +8,10 @@
     .cf;
 }
 
+.page {
+    padding-top: @px60;
+}
+
 .content-media {
     display: none;
 }
@@ -53,6 +57,18 @@
         display: block;
         float: right;
         margin-top: (@px40 + @px6);
+    }
+    
+    .page {
+        padding-top: (@px60 + @px20);
+    }
+
+}
+
+@media only screen and (min-width: @tabletSmall) {
+
+    .page {
+        padding-top: (@px60 + @px40);
     }
 
 }
