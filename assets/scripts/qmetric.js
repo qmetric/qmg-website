@@ -47,9 +47,6 @@
                 offset: -90
             });
 
-            addressBar();
-            orientationFix();
-
             document.getElement('.date-year').set('text', new Date().getFullYear());
 
             new MqShowHide('#nav', '.primary-nav', {
@@ -97,5 +94,13 @@
             }
 
         });
+
+        // Mobile stuffs
+        if (/mobile/i.test(navigator.userAgent)) {
+            addressBar();
+        }
+        if (navigator.userAgent.match(/(iPad|iPhone|iPod)/i)) {
+            orientationFix();
+        }
 
     });
