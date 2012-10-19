@@ -43,7 +43,8 @@
 
             new TermsLoader('.footer-links', '.hdr-terms-main > a');
             new ScrollSpy('nav', {
-                activeClass: 'nav-active'
+                activeClass: 'nav-active',
+                offset: -90
             });
 
             addressBar();

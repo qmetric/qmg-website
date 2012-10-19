@@ -481,11 +481,11 @@ ul {
 a {
   color: #e54125;
   text-decoration: none;
-  -webkit-transition: color 0.2s ease-in-out;
-  -moz-transition: color 0.2s ease-in-out;
-  -ms-transition: color 0.2s ease-in-out;
-  -o-transition: color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 a:hover,
 a:focus {
@@ -809,6 +809,44 @@ h1 {
     width: 100%;
     padding-left: 0;
   }
+}
+.btn {
+  display: block;
+  padding: 0.375em 0.875em;
+  float: left;
+  -webkit-box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.3);
+  -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+.btn:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+.btn-rounded {
+  -webkit-border-radius: 1.25em;
+  -moz-border-radius: 1.25em;
+  border-radius: 1.25em;
+}
+.btn-red {
+  background-color: #e54125;
+  color: #ffffff;
+}
+.btn-red:hover {
+  background-color: #c03017;
+}
+.btn-blue {
+  background-color: #138fe2;
+  color: #ffffff;
+}
+.btn-blue:hover {
+  background-color: #0f71b3;
+}
+.btn-small {
+  font-size: 0.875em;
+  padding: 0.375em 0.625em;
 }
 .staff dt {
   font-weight: bold;

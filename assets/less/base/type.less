@@ -26,12 +26,12 @@ menu, ol, ul {
 }
 
 a {
-    color: @link;
+    color: @red;
     text-decoration: none;
-    .transition(color .2s ease-in-out);
+    .transition(all .2s ease-in-out);
 
     &:hover, &:focus {
-        color: lighten(@link, 15%);
+        color: lighten(@red, 15%);
         text-decoration: underline;
     }
 }
