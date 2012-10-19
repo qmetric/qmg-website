@@ -10,34 +10,39 @@
     display: none;
 }
 
-.img {
-    .square(285px);
-    background-repeat: no-repeat;
-    background-position: 0 0;
+// Don't load images on mobile OR desktop
+@media only screen and (min-width: @tablet) and (max-width: @desktop) {
 
-    &.img-01 {
-        background-image: url("@{imgPath}01.png");
+    .img {
+        .square(285px);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+
+        &.img-01 {
+            background-image: url("@{imgPath}01.png");
+        }
+
+        &.img-02 {
+            background-image: url("@{imgPath}02.png");
+        }
+
+        &.img-03 {
+            background-image: url("@{imgPath}03.png");
+        }
+
+        &.img-04 {
+            background-image: url("@{imgPath}04.png");
+        }
+
+        &.img-05 {
+            background-image: url("@{imgPath}05.png");
+        }
+
+        &.img-06 {
+            background-image: url("@{imgPath}06.png");
+        }
     }
 
-    &.img-02 {
-        background-image: url("@{imgPath}02.png");
-    }
-
-    &.img-03 {
-        background-image: url("@{imgPath}03.png");
-    }
-
-    &.img-04 {
-        background-image: url("@{imgPath}04.png");
-    }
-
-    &.img-05 {
-        background-image: url("@{imgPath}05.png");
-    }
-
-    &.img-06 {
-        background-image: url("@{imgPath}06.png");
-    }
 }
 
 @media only screen and (min-width: @tablet) {
@@ -65,23 +70,108 @@
 
 @media only screen and (min-width: @desktop) {
 
-    .content-media > .img {
-        display: none;
-    }
-
     .content {
         border: none;
+        padding: 0;
+        margin: 0;
+
+        > .fixed-width {
+            position: relative;
+        }
     }
 
     .content-wrap {
         width: 490px;
         margin-top: 150px;
         margin-bottom: 50px;
+        
+        p, dl, ul {
+            font-size: @px13;
+        }
+    }
+
+    .img {
+        position: absolute;
+    }
+
+    .hdr-main span {
+        display: block;
+        width: 200px;
     }
 
     // Massive odd shaped background time!
     #what-we-do {
         background: url("@{imgPath}section-type-two-short.png") center 0 no-repeat;
+        
+        > .fixed-width {
+            height: 655px;
+        }
+
+        .img {
+            background: url("@{imgPath}img-whatwedo.png") center center no-repeat;
+            .size(683px, 483px);
+            right: -186px;
+            bottom: 83px;
+        }
+    }
+
+    #our-values {
+        background: url("@{imgPath}section-type-one.png") center 0 no-repeat;
+
+        > .fixed-width {
+            height: 900px;
+        }
+
+        .content-wrap {
+            float: right;
+        }
+
+        .img {
+            background: url("@{imgPath}img-ourvalues.png") center center no-repeat;
+            .size(597px, 676px);
+            left: -120px;
+            top: 106px;
+        }
+    }
+
+    #get-in-touch {
+        background: url("@{imgPath}section-type-one-long.png") center 0 no-repeat;
+
+        > .fixed-width {
+            height: 830px;
+            margin-top: 190px;
+        }
+    
+        .content-wrap {
+            margin: 0;
+            width: 450px;
+        }
+
+        #google-map {
+            .square(488px);
+            float: right;
+        }
+    }
+
+    #careers {
+        background: url("@{imgPath}section-type-two.png") center 0 no-repeat;
+        margin-bottom: 200px;
+
+        > .fixed-width {
+            height: 900px;
+        }
+
+        .content-wrap {
+            float: right;
+            width: 740px;
+        }
+
+        .img {
+            background: url("@{imgPath}img-careers.png") center center no-repeat;
+            .size(376px, 843px);
+            left: -130px;
+            top: 34px;
+        }
     }
 
 }

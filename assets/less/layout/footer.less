@@ -24,3 +24,25 @@
         margin-bottom: @px5;
     }
 }
+
+@media only screen and (min-width: @desktop) {
+
+    .site-footer {
+        font-size: @px12;
+        padding-bottom: @px5;
+
+        .copyright {
+            float: left;
+        }
+
+        .footer-links {
+            float: right;
+
+            > .term {
+                display: inline-block;
+                margin-left: @px25;
+            }
+        }
+    }
+
+}

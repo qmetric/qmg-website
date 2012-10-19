@@ -3,7 +3,16 @@
 
     #google-map {
         min-height: 500px;
+        clear: both;
         border: 1px solid @gray;
     }
+
+}
+
+@media only screen and (min-width: @desktop) {
+
+   #google-map {
+       clear: none;
+   }
 
 }
