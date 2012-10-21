@@ -43,11 +43,6 @@
         domReady(function() {
 
             new TermsLoader('.footer-links', '.hdr-terms-main');
-            new ScrollSpy('nav', {
-                activeClass: 'nav-active',
-                offset: -90
-            });
-
             document.getElement('.date-year').set('text', new Date().getFullYear());
 
             new MqShowHide('#nav', '.primary-nav', {
@@ -68,7 +63,7 @@
                 }
             }).hide();
 
-            // Load Google Maps above phone and small tablet
+            // Above phone and small tablet
             if (Modernizr.mq('(min-width: 46.875em)')) {
                 require(['gmaps'], function(gmaps) {
                     var latlng = new gmaps.LatLng(51.51442, -0.07771);
@@ -85,11 +80,19 @@
                         map: map
                     });
                 });
+
+                // Don't run this on mobile as scroll events on window
+                // are CPU hungry
+                new ScrollSpy('nav', {
+                    activeClass: 'nav-active',
+                    offset: -90
+                });
             }
-            
+
+            // Close the nav after item selected
             if (!Modernizr.mq('(min-width: 37.5em)')) {
                 var navContainer = document.getElement('.nav-toggle-container');
-                document.getElement('.primary-nav').addEvent('click:relay(a)', function(event) {
+                document.getElement('.primary-nav').addEvent('click:relay(a)', function() {
                     navContainer.hide();
                 });
             }
