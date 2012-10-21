@@ -1,12 +1,6 @@
 // https://github.com/jrburke/r.js/blob/master/build/example.build.js
 ({
     baseUrl: 'assets/scripts/',
-    /*paths: {
-        'mootools': 'lib/mootools',
-        'mootools-more': 'lib/mootools-more',
-        'domReady': 'lib/domReady',
-        'async': 'lib/async'
-    },*/
     mainConfigFile: './assets/scripts/qmetric.js',
 
     optimize: 'uglify',

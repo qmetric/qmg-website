@@ -13,16 +13,6 @@
     a {
         color: @offWhite;
     }
-
-    ul {
-        margin: 1em 0;
-        list-style-type: disc;
-        margin-left: 1em;
-    }
-
-    li {
-        margin-bottom: @px5;
-    }
 }
 
 @media only screen and (min-width: @desktop) {
@@ -30,6 +20,13 @@
     .site-footer {
         font-size: @px12;
         padding-bottom: @px5;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+
+        .fixed-width {
+            position: relative;
+        }
 
         .copyright {
             float: left;
@@ -37,11 +34,6 @@
 
         .footer-links {
             float: right;
-
-            > .term {
-                display: inline-block;
-                margin-left: @px25;
-            }
         }
     }
 

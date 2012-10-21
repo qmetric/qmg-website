@@ -21,7 +21,8 @@
                 deps: ['mootools'],
                 exports: 'moostrapScrollspy'
             }
-        }
+        },
+        urlArgs: "bust=" +  (new Date()).getTime()
     });
 
     // Create Google Maps module - http://blog.millermedeiros.com/requirejs-2-0-delayed-module-evaluation-and-google-maps/
@@ -41,7 +42,7 @@
 
         domReady(function() {
 
-            new TermsLoader('.footer-links', '.hdr-terms-main > a');
+            new TermsLoader('.footer-links', '.hdr-terms-main');
             new ScrollSpy('nav', {
                 activeClass: 'nav-active',
                 offset: -90
