@@ -10,7 +10,18 @@
         no_copyright: true
     },
 
-    out: 'assets/scripts/qmetric.min.js',
-    name: 'qmetric',
-    include: ['async']
+    dir: 'assets/scripts.min',
+    modules: [
+        {
+            name: 'qmetric',
+            include: ['async']
+        },
+        {
+            name: 'mobile'
+        },
+        {
+            name: 'modules/ScrollSpy',
+            exclude: ['mootools']
+        }
+    ]
 })

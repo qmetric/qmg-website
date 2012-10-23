@@ -21,8 +21,7 @@
                 deps: ['mootools'],
                 exports: 'moostrapScrollspy'
             }
-        },
-        urlArgs: "bust=" +  (new Date()).getTime()
+        }
     });
 
     // Create Google Maps module - http://blog.millermedeiros.com/requirejs-2-0-delayed-module-evaluation-and-google-maps/
@@ -34,11 +33,8 @@
     require([
         'domReady',
         'modules/TermsLoader',
-        'modules/MqShowHide',
-        'modules/ScrollSpy',
-        'lib/address-bar',
-        'lib/orientation-fix'
-    ], function(domReady, TermsLoader, MqShowHide, ScrollSpy, addressBar, orientationFix) {
+        'modules/MqShowHide'
+    ], function(domReady, TermsLoader, MqShowHide) {
 
         domReady(function() {
 
@@ -63,7 +59,7 @@
                 }
             }).hide();
 
-            // Above phone and small tablet
+            // Load gmaps above phone and small tablet
             if (Modernizr.mq('(min-width: 46.875em)')) {
                 require(['gmaps'], function(gmaps) {
                     var latlng = new gmaps.LatLng(51.51442, -0.07771);
@@ -80,16 +76,9 @@
                         map: map
                     });
                 });
-
-                // Don't run this on mobile as scroll events on window
-                // are CPU hungry
-                new ScrollSpy('nav', {
-                    activeClass: 'nav-active',
-                    offset: -90
-                });
             }
 
-            // Close the nav after item selected
+            // Close the nav after item selected (phone only)
             if (!Modernizr.mq('(min-width: 37.5em)')) {
                 var navContainer = document.getElement('.nav-toggle-container');
                 document.getElement('.primary-nav').addEvent('click:relay(a)', function() {
@@ -97,14 +86,22 @@
                 });
             }
 
+            // Don't run this on mobile as scroll events on window
+            // are CPU hungry
+            if (Modernizr.mq('(min-width: 46.875em)')) {
+                require(['modules/ScrollSpy'], function(ScrollSpy) {
+                    new ScrollSpy('nav', {
+                        activeClass: 'nav-active',
+                        offset: -90
+                    });
+                });
+            }
+
         });
 
-        // Mobile stuffs
-        if (/mobile/i.test(navigator.userAgent)) {
-            addressBar();
-        }
-        if (navigator.userAgent.match(/(iPad|iPhone|iPod)/i)) {
-            orientationFix();
+        // Some mobile specific stuff
+        if (!Modernizr.mq('(min-width: 37.5em)')) {
+            require(['mobile']);
         }
 
     });
