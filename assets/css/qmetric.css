@@ -724,6 +724,8 @@ h1 {
   }
   .img {
     position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
   .hdr-main span {
     display: block;
@@ -736,7 +738,7 @@ h1 {
     height: 655px;
   }
   #what-we-do .img {
-    background: url("../images/img-whatwedo.png") center center no-repeat;
+    background-image: url("../images/img-whatwedo.png");
     width: 683px;
     height: 483px;
     right: -186px;
@@ -752,7 +754,7 @@ h1 {
     float: right;
   }
   #our-values .img {
-    background: url("../images/img-ourvalues.png") center center no-repeat;
+    background-image: url("../images/img-ourvalues.png");
     width: 597px;
     height: 676px;
     left: -120px;
@@ -786,11 +788,50 @@ h1 {
     width: 740px;
   }
   #careers .img {
-    background: url("../images/img-careers.png") center center no-repeat;
+    background-image: url("../images/img-careers.png");
     width: 376px;
     height: 843px;
     left: -130px;
     top: 34px;
+  }
+  #who-we-are {
+    background: url("../images/section-type-one.png") center 0 no-repeat;
+    height: 900px;
+  }
+  #who-we-are .fixed-width {
+    position: relative;
+  }
+  #who-we-are .content {
+    background: none;
+  }
+  #who-we-are .content-wrap {
+    position: absolute;
+    right: 0;
+    top: 110px;
+  }
+  #who-we-are .img {
+    left: -113px;
+    top: 103px;
+    width: 608px;
+    height: 686px;
+  }
+  #who-we-are .btn-prev {
+    left: 425px;
+    top: 460px;
+  }
+  #who-we-are .btn-next {
+    top: 460px;
+    right: -60px;
+  }
+  .who-we-are .img {
+    background-image: url("../images/img-whoweare1.png");
+  }
+  .our-team {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .our-team .img {
+    background-image: url("../images/img-whoweare2.png");
   }
 }
 .primary-nav {
@@ -922,6 +963,12 @@ h1 {
     width: 100%;
     padding-left: 0;
   }
+  .intro:after {
+    content: '';
+    display: block;
+    height: auto;
+    background: none;
+  }
 }
 .btn {
   display: block;
@@ -961,6 +1008,34 @@ h1 {
   font-size: 0.875em;
   padding: 0.375em 0.625em;
 }
+.btn-prev,
+.btn-next {
+  display: none;
+}
+@media only screen and (min-width: 78.125em) {
+  .btn-prev,
+  .btn-next {
+    display: block;
+    width: 44px;
+    height: 44px;
+    background-color: #e54125;
+    background-repeat: no-repeat;
+    background-image: url("../images/arrows.png");
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: none;
+    text-indent: -9999px;
+    z-index: 100;
+    position: absolute;
+  }
+  .btn-prev {
+    background-position: 14px 10px;
+  }
+  .btn-next {
+    background-position: 17px -39px;
+  }
+}
 .staff dt {
   font-weight: bold;
 }
@@ -978,6 +1053,12 @@ h1 {
   .staff dd {
     float: left;
     margin-top: 0.125em;
+  }
+}
+@media only screen and (min-width: 78.125em) {
+  .staff dd {
+    font-size: 1em;
+    margin-top: 0;
   }
 }
 .jobs {

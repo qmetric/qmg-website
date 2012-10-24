@@ -21,7 +21,8 @@
                 deps: ['mootools'],
                 exports: 'moostrapScrollspy'
             }
-        }
+        },
+        urlArgs: "bust=" +  (new Date()).getTime()
     });
 
     // Create Google Maps module - http://blog.millermedeiros.com/requirejs-2-0-delayed-module-evaluation-and-google-maps/
@@ -94,6 +95,12 @@
                         activeClass: 'nav-active',
                         offset: -90
                     });
+                });
+            }
+
+            if (Modernizr.mq('(min-width: 78.125em)')) {
+                require(['modules/Carousel'], function(Carousel) {
+                    new Carousel('#who-we-are .fixed-width', '.content');
                 });
             }
 

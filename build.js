@@ -22,6 +22,10 @@
         {
             name: 'modules/ScrollSpy',
             exclude: ['mootools']
+        },
+        {
+            name: 'modules/Carousel',
+            exclude: ['mootools']
         }
     ]
 })

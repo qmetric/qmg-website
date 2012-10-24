@@ -37,3 +37,35 @@
     font-size: @px14;
     padding: @px6 @px10;
 }
+
+// Carousel buttons - positions are set in the content-boxes module
+.btn-prev,
+.btn-next {
+    display: none;
+}
+
+@media only screen and (min-width: @desktop) {
+
+    .btn-prev,
+    .btn-next {
+        display: block;
+        .square(44px);
+        background-color: @red;
+        background-repeat: no-repeat;
+        background-image: url("@{imgPath}arrows.png");
+        .border-radius(50%);
+        border: none;
+        text-indent: -9999px;
+        z-index: 100;
+        position: absolute;
+    }
+
+    .btn-prev {
+        background-position: 14px 10px;
+    }
+
+    .btn-next {
+        background-position: 17px -39px;
+    }
+
+}
