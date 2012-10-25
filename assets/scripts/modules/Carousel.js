@@ -18,7 +18,6 @@
             initialize: function(container, items, options) {
                 this.container = document.getElement(container);
                 this.items = this.container.getElements(items);
-                this.items[0].addClass('carousel-active');
                 this.setOptions(options);
 
                 this.addNav();

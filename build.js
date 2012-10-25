@@ -3,6 +3,7 @@
     baseUrl: 'assets/scripts/',
     mainConfigFile: './assets/scripts/qmetric.js',
 
+    removeCombined: true,
     optimize: 'uglify',
     preserveLicenseComments: false,
     uglify: {
@@ -18,10 +19,6 @@
         },
         {
             name: 'mobile'
-        },
-        {
-            name: 'modules/ScrollSpy',
-            exclude: ['mootools']
         },
         {
             name: 'modules/Carousel',
