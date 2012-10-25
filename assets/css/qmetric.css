@@ -867,10 +867,6 @@ h1 {
   color: #e54125;
   text-decoration: none;
 }
-.nav-active:before {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
 .nav-toggle-container {
   clear: both;
 }
@@ -1028,6 +1024,10 @@ h1 {
     text-indent: -9999px;
     z-index: 100;
     position: absolute;
+  }
+  .btn-prev:hover,
+  .btn-next:hover {
+    background-color: #e8553c;
   }
   .btn-prev {
     background-position: 14px 10px;

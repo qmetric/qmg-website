@@ -16,10 +16,6 @@
                 init: function(MooTools) {
                     return MooTools.More
                 }
-            },
-            'modules/ScrollSpy': {
-                deps: ['mootools'],
-                exports: 'moostrapScrollspy'
             }
         },
         urlArgs: "bust=" +  (new Date()).getTime()
@@ -87,17 +83,6 @@
                 });
             }
 
-            // Don't run this on mobile as scroll events on window
-            // are CPU hungry
-            if (Modernizr.mq('(min-width: 46.875em)')) {
-                require(['modules/ScrollSpy'], function(ScrollSpy) {
-                    new ScrollSpy('nav', {
-                        activeClass: 'nav-active',
-                        offset: -90
-                    });
-                });
-            }
-
             if (Modernizr.mq('(min-width: 78.125em)')) {
                 require(['modules/Carousel'], function(Carousel) {
                     new Carousel('#who-we-are .fixed-width', '.content');
@@ -106,8 +91,8 @@
 
         });
 
-        // Some mobile specific stuff
-        if (!Modernizr.mq('(min-width: 37.5em)')) {
+        // Some mobile/tablet specific stuff
+        if (Modernizr.mq('(max-width: 64em)')) {
             require(['mobile']);
         }
 
