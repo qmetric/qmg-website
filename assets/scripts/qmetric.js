@@ -17,8 +17,7 @@
                     return MooTools.More
                 }
             }
-        },
-        urlArgs: "bust=" +  (new Date()).getTime()
+        }
     });
 
     // Create Google Maps module - http://blog.millermedeiros.com/requirejs-2-0-delayed-module-evaluation-and-google-maps/
