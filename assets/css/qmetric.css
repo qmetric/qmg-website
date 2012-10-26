@@ -784,6 +784,42 @@ h1 {
     height: 488px;
     float: right;
   }
+  #our-brands {
+    background: url("../images/section-type-two.png") center 0 no-repeat;
+  }
+  #our-brands > .fixed-width {
+    height: 900px;
+  }
+  #our-brands .content-wrap {
+    float: right;
+    position: relative;
+    margin-top: 155px;
+  }
+  #our-brands .img {
+    background-image: url("../images/img-ourbrands.png");
+    width: 617px;
+    height: 843px;
+    left: -130px;
+    top: 34px;
+  }
+  #our-brands .carousel-item {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  #our-brands .btn-prev {
+    left: 415px;
+    top: 430px;
+  }
+  #our-brands .btn-next {
+    top: 430px;
+    right: -60px;
+  }
   #careers {
     background: url("../images/section-type-two.png") center 0 no-repeat;
     margin-bottom: 180px;
@@ -973,6 +1009,66 @@ h1 {
     display: block;
     height: auto;
     background: none;
+  }
+}
+.pe-logo {
+  background: url('../images/pe-logo.png') no-repeat 0 0;
+  width: 209px;
+  height: 38px;
+  margin-bottom: 0.625em;
+}
+.table {
+  margin: 1.875em 0;
+}
+.table table {
+  font-size: 0.75em;
+  width: 100%;
+}
+.table thead .first {
+  width: 180px;
+}
+.table tbody tr.first {
+  background: #ffffff;
+  border-bottom: 1px solid #7E8993;
+}
+.table tbody td.first {
+  border-right: 1px solid #7E8993;
+}
+.table td {
+  text-align: center;
+  padding: 0.625em;
+}
+.table th {
+  padding: 0.625em;
+}
+.table thead {
+  background: #162C41;
+  border-left: 1px solid #162C41;
+  border-right: 1px solid #162C41;
+  color: #ffffff;
+}
+.table thead strong {
+  font-size: 1.25em;
+}
+.table tbody td {
+  vertical-align: middle;
+}
+.table tbody {
+  border-left: 1px solid #7E8993;
+  border-right: 1px solid #7E8993;
+  border-bottom: 1px solid #7E8993;
+}
+.table .cross {
+  color: #CC0000;
+  font-size: 18px;
+}
+.table .tick {
+  color: #33CC00;
+  font-size: 18px;
+}
+@media only screen and (min-width: 78.125em) {
+  .table {
+    margin: 0.9375em 0;
   }
 }
 .btn {
@@ -1230,5 +1326,9 @@ h1 {
   .btn-nav-toggle {
     background-image: url("../images/nav-icon@2x.png");
     background-size: 26px 16px;
+  }
+  .pe-logo {
+    background-image: url('../images/pe-logo@2x.png');
+    background-size: 209px 38px;
   }
 }

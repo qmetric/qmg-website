@@ -1,0 +1,75 @@
+.pe-logo {
+    background: url('@{imgPath}pe-logo.png') no-repeat 0 0;
+    .size(209px, 38px);
+    margin-bottom: @px10;
+}
+
+.table {
+    margin: @px30 0;
+
+    table {
+        font-size: @px12;
+        width: 100%;
+    }
+
+    thead .first {
+        width: 180px;
+    }
+
+    tbody tr.first {
+        background: #ffffff;
+        border-bottom: 1px solid #7E8993;
+    }
+
+    tbody td.first {
+        border-right: 1px solid #7E8993;
+    }
+
+    td {
+        text-align: center;
+        padding: @px10;
+    }
+    
+    th {
+        padding: @px10;
+    }
+
+    thead {
+        background: #162C41;
+        border-left: 1px solid #162C41;
+        border-right: 1px solid #162C41;
+        color: #ffffff;
+
+        strong {
+            font-size: @px20;
+        }
+    }
+
+    tbody td {
+        vertical-align: middle;
+    }
+
+    tbody {
+        border-left: 1px solid #7E8993;
+        border-right: 1px solid #7E8993;
+        border-bottom: 1px solid #7E8993;
+    }
+
+    .cross {
+        color: #CC0000;
+        font-size: 18px;
+    }
+
+    .tick {
+        color: #33CC00;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: @desktop) {
+    
+    .table {
+        margin: @px15 0;
+    }
+    
+}

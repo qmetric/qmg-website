@@ -36,6 +36,19 @@
         domReady(function() {
 
             new TermsLoader('.footer-links', '.hdr-terms-main');
+
+            var scroll = new Fx.Scroll(window, {
+                duration: 800,
+                offset: {
+                    y: -75
+                }
+            });
+            document.getElement('.site-header').addEvent('click:relay(.site-title a, .primary-nav a)', function(event) {
+                var target = this.get('href').split('#')[1];
+                scroll.toElement(target);
+                event.preventDefault();
+            });
+
             document.getElement('.date-year').set('text', new Date().getFullYear());
 
             new MqShowHide('#nav', '.primary-nav', {
@@ -86,6 +99,7 @@
             if (Modernizr.mq('(min-width: 78.125em)')) {
                 require(['modules/Carousel'], function(Carousel) {
                     new Carousel('#who-we-are .fixed-width', '.content');
+                    new Carousel('#our-brands .fixed-width', '.carousel-item');
                 });
             }
 
