@@ -4,6 +4,7 @@
 
 require(['modules/Carousel'], function(Carousel) {
     new Carousel('#who-we-are .fixed-width', '.content');
+    new Carousel('#our-brands .fixed-width', '.carousel-item');
 });
 
 require(['gmaps'], function(gmaps) {
