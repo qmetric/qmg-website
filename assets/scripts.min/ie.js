@@ -1,0 +1,1 @@
+require(["modules/Carousel"],function(e){new e("#who-we-are .fixed-width",".content"),new e("#our-brands .fixed-width",".carousel-item")}),require(["gmaps"],function(e){var t=new e.LatLng(51.51442,-0.07771),n=document.getElementById("google-map"),r=new e.Map(n,{zoom:16,center:t,mapTypeId:e.MapTypeId.ROADMAP});new e.Marker({position:t,map:r})})
