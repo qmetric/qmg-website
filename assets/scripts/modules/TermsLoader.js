@@ -24,7 +24,7 @@
             attachEvents: function() {
                 this.container.addEvent('click:relay(button.term-close)', this.closeTerms.bind(this));
 
-                document.body.addEvent('keyup', function(event) {
+                $(document.body).addEvent('keyup', function(event) {
                     if ( event.key === 'esc' ) {
                         this.closeTerms();
                     }

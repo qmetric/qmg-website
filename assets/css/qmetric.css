@@ -704,6 +704,14 @@ h1 {
   }
 }
 @media only screen and (min-width: 78.125em) {
+  .fade-out {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+  .fade-in {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
   .content {
     border: none;
     padding: 0;
@@ -803,6 +811,11 @@ h1 {
   }
   #who-we-are .content {
     background: none;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   #who-we-are .content-wrap {
     position: absolute;
@@ -825,10 +838,6 @@ h1 {
   }
   .who-we-are .img {
     background-image: url("../images/img-whoweare1.png");
-  }
-  .our-team {
-    visibility: hidden;
-    opacity: 0;
   }
   .our-team .img {
     background-image: url("../images/img-whoweare2.png");

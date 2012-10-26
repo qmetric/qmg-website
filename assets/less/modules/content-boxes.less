@@ -70,6 +70,16 @@
 
 @media only screen and (min-width: @desktop) {
 
+    .fade-out {
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    .fade-in {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
     .content {
         border: none;
         padding: 0;
@@ -188,6 +198,7 @@
 
         .content {
             background: none;
+            .transition(all .5s ease-in-out);
         }
 
         .content-wrap {
@@ -220,9 +231,6 @@
     }
 
     .our-team {
-        visibility: hidden;
-        opacity: 0;
-
         .img {
             background-image: url("@{imgPath}img-whoweare2.png");
         }

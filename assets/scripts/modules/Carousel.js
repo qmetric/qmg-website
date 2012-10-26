@@ -18,13 +18,14 @@
             initialize: function(container, items, options) {
                 this.container = document.getElement(container);
                 this.items = this.container.getElements(items);
+                this.items[1].addClass('fade-out');
                 this.setOptions(options);
 
                 this.addNav();
             },
 
             fadeToggle: function(event) {
-                this.items.fade('toggle');
+                this.items.toggleClass('fade-out');
                 event && event.preventDefault();
             },
 
