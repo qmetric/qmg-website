@@ -7,7 +7,7 @@ def deploy(stack, version=None):
     """ Deploy this service to all hosts in a specified stack. For example fab deploy:demo will deploy to the demo stack."""
     """ Destination directories MUST end with a trailing slash, otherwise fabric gives 'file not found"""
     files = [('qmetric', '/var/www/html/'),
-             ('tech-blog/output', '/var/www/html/tech-blog'),
+             ('tech-blog/output', '/var/www/html/qmetric/tech-blog'),
     ]
     service = 'httpd'
 
