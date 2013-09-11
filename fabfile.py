@@ -11,4 +11,4 @@ def deploy(stack, version=None):
     ]
     service = 'httpd'
 
-    fabric.deploy_app(stack=stack, artifact="qmetric", files=files, templates=templates, version=version, before=StopService(service), after=StartService(service))
+    fabric.deploy_app(stack=stack, artifact="qmetric", files=files, version=version, before=StopService(service), after=StartService(service))
