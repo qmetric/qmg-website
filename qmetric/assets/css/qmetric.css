@@ -445,8 +445,6 @@ table {
   border-spacing: 0;
 }
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 body {
@@ -1013,9 +1011,9 @@ h1 {
   }
 }
 .pe-logo {
-  background: url('../images/pe-logo.png') no-repeat 0 0;
-  width: 209px;
-  height: 38px;
+  background: url('https://www.policyexpert.co.uk/shared-assets/v2/images/logo_policy_expert.png') no-repeat 0 0;
+  width: 242px;
+  height: 70px;
   margin-bottom: 0.625em;
 }
 .table {
