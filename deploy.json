@@ -1,0 +1,15 @@
+{
+    "name": "qmgwebsite",
+    "strategy": "default",
+    "assets": [
+        {
+            "type": "file",
+            "src": "qmetric",
+            "dest": "/var/www/html/"
+        }
+    ],
+    "services": [
+        "httpd"
+    ]
+}
+
