@@ -51,7 +51,7 @@
     })
 
     if($('.v-fail').length === 0) {
-	$('contact-us-form-btn').val("Sending....");
+	$('contact-us-form-btn').text("Sending....");
 	    
       var URL = 'https://hcnmfikqrg.execute-api.eu-west-1.amazonaws.com/dev/contact';
        var data = {
@@ -69,11 +69,11 @@
          data: JSON.stringify(data),
          success: function () {
            clearContactUs();
-	   $('contact-us-form-btn').val("Submit");				 
+	   $('contact-us-form-btn').text("Submit");				 
            $('#myModal').modal('show');
          },
          error: function () {
-           $('contact-us-form-btn').val("Submit");
+           $('contact-us-form-btn').text("Submit");
            // show an error message
            alert('Unfortunately, we are unable to process your request at this time.'); 
          }
