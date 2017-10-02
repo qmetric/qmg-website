@@ -51,6 +51,8 @@
     })
 
     if($('.v-fail').length === 0) {
+	$('contact-us-form-btn').val("Sending....");
+	    
       var URL = 'https://hcnmfikqrg.execute-api.eu-west-1.amazonaws.com/dev/contact';
        var data = {
          name: $('#name').val(),
@@ -67,9 +69,11 @@
          data: JSON.stringify(data),
          success: function () {
            clearContactUs();
+	   $('contact-us-form-btn').val("Submit");				 
            $('#myModal').modal('show');
          },
          error: function () {
+           $('contact-us-form-btn').val("Submit");
            // show an error message
            alert('Unfortunately, we are unable to process your request at this time.'); 
          }
