@@ -4,7 +4,7 @@
     "assets": [
         {
             "type": "file",
-            "src": "qmetric",
+            "src": "corporate-site",
             "dest": "/var/www/html/"
         }
     ],
