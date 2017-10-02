@@ -13,8 +13,7 @@
 	// forms
   $("#formContact").submit(function(e) {
 
-  // blocking submit
-  // e.preventDefault();
+    e.preventDefault();
 
     // getting all input elemets in array
     var inputs = $('#formContact :input');
@@ -33,7 +32,6 @@
       var err = '#'+key+'Fe';
 
       if (value == "") {
-        e.preventDefault();
         $(inVal).addClass('v-fail');
         $(err).removeClass('hide');
         if (key == "message") { 
@@ -55,10 +53,10 @@
     if($('.v-fail').length === 0) {
       var URL = 'https://hcnmfikqrg.execute-api.eu-west-1.amazonaws.com/dev/contact';
        var data = {
-         name: $('#name'),
-         email: $('#email'),
-         phone: $('#phone'),
-         message: $('#message')
+         name: $('#name').val(),
+         email: $('#email').val(),
+         phone: $('#phone').val(),
+         message: $('#message').val()
        };
        
        $.ajax({
@@ -68,16 +66,23 @@
          contentType: 'application/json',
          data: JSON.stringify(data),
          success: function () {
-           // clear form and show a success message
-           alert('yay');
+           clearContactUs();
+           $('#myModal').modal('show');
          },
          error: function () {
            // show an error message
-           alert('boo');
+           alert('Unfortunately, we are unable to process your request at this time.'); 
          }
        });
     }
   });
+
+  function clearContactUs() {
+    $('#name').val("");
+    $('#email').val("");
+    $('#phone').val("");
+    $('#message').val("");
+  }
 
 
   //label animation
