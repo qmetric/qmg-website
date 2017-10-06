@@ -53,7 +53,7 @@
     if($('.v-fail').length === 0) {
 	$('contact-us-form-btn').text("Sending....");
 	    
-      var URL = 'https://hcnmfikqrg.execute-api.eu-west-1.amazonaws.com/dev/contact';
+      var URL = 'hhttps://8w7pv6tfyj.execute-api.eu-west-1.amazonaws.com/LIVE/contact-us?destination=qmetric-website';
        var data = {
          name: $('#name').val(),
          email: $('#email').val(),
