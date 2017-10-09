@@ -65,17 +65,16 @@
 
             $.ajax({
                 type: 'POST',
+                crossDomain: true,
                 url: URL,
                 dataType: 'json',
                 contentType: 'application/json',
                 data: JSON.stringify(data),
                 success: function() {
                     clearContactUs();
-                    $('contact-us-form-btn').text("Submit");
                     $('#myModal').modal('show');
                 },
                 error: function() {
-                    $('contact-us-form-btn').text("Submit");
                     // show an error message
                     alert('Unfortunately, we are unable to process your request at this time.');
                 }
