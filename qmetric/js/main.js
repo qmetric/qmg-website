@@ -65,7 +65,6 @@
 
             $.ajax({
                 type: 'POST',
-                crossDomain: true,
                 url: URL,
                 dataType: 'json',
                 contentType: 'application/json',
