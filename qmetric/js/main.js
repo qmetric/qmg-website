@@ -64,7 +64,7 @@
             };
 
             $.ajax({
-                type: 'POST',
+                method: 'POST',
                 url: URL,
                 dataType: 'html',
                 contentType: 'application/json',
