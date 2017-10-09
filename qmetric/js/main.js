@@ -66,7 +66,7 @@
             $.ajax({
                 type: 'POST',
                 url: URL,
-                dataType: 'json',
+                dataType: 'html',
                 contentType: 'application/json',
                 data: JSON.stringify(data),
                 success: function() {
