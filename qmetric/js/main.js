@@ -61,7 +61,7 @@
                 email: $('#email').val(),
                 phone: $('#phone').val(),
                 message: $('#message').val(),
-                destination: "qmetric"
+                host: "QGL"
             };
 
             $.ajax({
