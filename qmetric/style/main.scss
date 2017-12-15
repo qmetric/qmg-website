@@ -947,6 +947,40 @@ footer {
 	}
 }
 
+//cookie/alert phishing message
+
+.message_cookies {
+	padding: 20px 0;
+	width: 100%;
+	z-index: 1000;
+	position: fixed;
+	bottom: 0;
+	background: #e5f5ff;
+	opacity: .95;
+	filter: alpha(opacity=95);
+
+  p{
+    font-size:14px;
+    line-height:20px;
+
+    a{
+      color:#e54125;
+    }
+  }
+}
+.cookie-message-close{
+
+  display:block;
+  float:right;
+  cursor:pointer;
+  font-weight:bold;
+
+}
+
+.icon-cancel{
+  padding-left:10px;
+}
+
 //other responsive views
 @media (max-width: '1780px') {
 	.s-3 {
