@@ -10,7 +10,7 @@
             scrollTop: $('.' + target).offset().top - 60
         }, 2000);
     });
-    
+
     // forms
     $("#formContact").submit(function(e) {
 
