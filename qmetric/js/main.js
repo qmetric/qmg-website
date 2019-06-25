@@ -54,7 +54,7 @@
 
         if ($('.v-fail').length === 0) {
 
-            var stage = /www/.test(window.location) ? "LIVE" : "DEV"
+            var stage = /uat/.test(window.location) ? "DEV" : "LIVE";
             var URL = 'https://8w7pv6tfyj.execute-api.eu-west-1.amazonaws.com/' + stage + '/contact-us'
             var data = {
                 name: $('#name').val(),
