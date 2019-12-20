@@ -1,11 +1,6 @@
-/*variables*/
-$font-stack: Helvetica, sans-serif;
-$c-white: white;
-$c-blue: #162c41;
-$c-lightblue: #ecf4fb;
-$c-lightgrey: #ebebeb;
-$c-orange: #e54125;
-$c-grey: #666666;
+@import "variables";
+@import "carousel";
+
 
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -531,47 +526,8 @@ main a:hover, main a:focus {
   margin: 0 auto !important
 }
 
-.s-6 #myCarousel a:hover:before, .s-6 #myCarousel a:focus:before {
-  visibility: hidden
-}
 
-.s-6 #myCarousel img {
-  margin: auto
-}
 
-.s-6 #myCarousel p {
-  padding: 15px 0;
-  font-weight: bold
-}
-
-.s-6 #myCarousel .item{
-  height: 210px;
-  // padding: 0 10%;
-}
-
-.s-6 #myCarousel .item img.img-responsive{
-  max-height: 100px;
-}
-
-.s-6 #myCarousel .carousel-control.right, .s-6 #myCarousel .carousel-control.left {
-  background-image: none
-}
-
-.s-6 #myCarousel .glyphicon-chevron-right, .s-6 #myCarousel .glyphicon-chevron-left {
-  color: $c-orange
-}
-
-.s-6 #myCarousel .carousel-indicators {
-  bottom: -20px
-}
-
-.s-6 #myCarousel .carousel-indicators .active {
-  background-color: $c-orange
-}
-
-.s-6 #myCarousel .carousel-indicators li {
-  border: 1px solid $c-orange
-}
 
 .s-7 h4 {
   font-size: 20px;
@@ -1016,10 +972,7 @@ footer a:hover, footer a:focus {
       display: none
   }
 
-  .s-6 #myCarousel {
-      display: block;
-      height: 165px
-  }
+
 
   .s-7 img {
       margin: 0 auto;

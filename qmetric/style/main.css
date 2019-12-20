@@ -1,4 +1,74 @@
-/*variables*/
+.logo-carousel {
+  display: block;
+}
+.logo-carousel a:hover:before,
+.logo-carousel a:focus:before {
+  visibility: hidden;
+}
+.logo-carousel img {
+  margin: auto;
+  height: 90px;
+  width: auto;
+  max-width: none;
+  max-height: none;
+}
+.logo-carousel img.logo-wide {
+  width: 75%;
+  height: auto;
+}
+.logo-carousel p {
+  padding: 15px 0;
+  font-weight: bold;
+}
+.logo-carousel .item {
+  height: 210px;
+}
+.logo-carousel .item img.img-responsive {
+  max-height: 100px;
+}
+.logo-carousel .carousel-control.right,
+.logo-carousel .carousel-control.left {
+  background-image: none;
+}
+.logo-carousel .glyphicon-chevron-right,
+.logo-carousel .glyphicon-chevron-left {
+  color: #e54125;
+}
+.logo-carousel .carousel-indicators {
+  bottom: -20px;
+}
+.logo-carousel .carousel-indicators .active {
+  background-color: #e54125;
+}
+.logo-carousel .carousel-indicators li {
+  border: 1px solid #e54125;
+}
+.logo-carousel .carousel-control img {
+  height: auto;
+}
+
+@media (min-width: 991px) {
+  .carousel-inner {
+    height: 240px;
+  }
+
+  #myCarousel2 {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .carousel-control {
+    width: auto;
+  }
+
+  .carousel-control.right {
+    right: -40px;
+  }
+
+  .carousel-control.left {
+    left: -40px;
+  }
+}
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -518,47 +588,6 @@ main a:hover, main a:focus {
   margin: 0 auto !important;
 }
 
-.s-6 #myCarousel a:hover:before, .s-6 #myCarousel a:focus:before {
-  visibility: hidden;
-}
-
-.s-6 #myCarousel img {
-  margin: auto;
-}
-
-.s-6 #myCarousel p {
-  padding: 15px 0;
-  font-weight: bold;
-}
-
-.s-6 #myCarousel .item {
-  height: 210px;
-}
-
-.s-6 #myCarousel .item img.img-responsive {
-  max-height: 100px;
-}
-
-.s-6 #myCarousel .carousel-control.right, .s-6 #myCarousel .carousel-control.left {
-  background-image: none;
-}
-
-.s-6 #myCarousel .glyphicon-chevron-right, .s-6 #myCarousel .glyphicon-chevron-left {
-  color: #e54125;
-}
-
-.s-6 #myCarousel .carousel-indicators {
-  bottom: -20px;
-}
-
-.s-6 #myCarousel .carousel-indicators .active {
-  background-color: #e54125;
-}
-
-.s-6 #myCarousel .carousel-indicators li {
-  border: 1px solid #e54125;
-}
-
 .s-7 h4 {
   font-size: 20px;
   margin-bottom: 0;
@@ -1000,11 +1029,6 @@ footer a:hover, footer a:focus {
 
   .s-6 .awards-1 {
     display: none;
-  }
-
-  .s-6 #myCarousel {
-    display: block;
-    height: 165px;
   }
 
   .s-7 img {

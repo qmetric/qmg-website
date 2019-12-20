@@ -1,0 +1,91 @@
+@import "variables";
+
+.logo-carousel{
+    display: block;
+    //height: 165px;
+    
+    a:hover:before, 
+    a:focus:before {
+        visibility: hidden;
+    }
+
+    img {
+        margin: auto;
+        height: 90px;
+        width: auto;
+        max-width: none;
+        max-height: none;
+    }
+
+    img.logo-wide{
+        width: 75%;
+        height: auto;
+    }
+
+    p {
+        padding: 15px 0;
+        font-weight: bold;
+    }
+
+    .item{
+        height: 210px;
+
+        img.img-responsive{
+            max-height: 100px;
+        }
+    }
+
+    .carousel-control.right, 
+    .carousel-control.left {
+        background-image: none;
+    }
+
+    .glyphicon-chevron-right, 
+    .glyphicon-chevron-left {
+        color: $c-orange;
+    }
+
+    .carousel-indicators {
+        bottom: -20px;
+
+        .active {
+            background-color: $c-orange
+        }
+
+        li {
+            border: 1px solid $c-orange
+        }
+    }
+
+    .carousel-control{
+        img{
+            height: auto;
+        }
+    }
+}
+
+// 
+@media (min-width: 991px){
+
+    .carousel-inner{
+        height: 240px;
+    }
+
+    #myCarousel2{
+        width: 90%;
+        margin: 0 auto;
+    }
+   
+    .carousel-control{
+        width: auto;
+        
+    }
+
+    .carousel-control.right{
+        right: -40px;
+    }
+    .carousel-control.left{
+        left: -40px;
+    }
+}
+
