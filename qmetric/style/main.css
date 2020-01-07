@@ -1,3 +1,8 @@
+.logo-item p {
+  font-size: 16px;
+  line-height: 26px;
+}
+
 .logo-carousel {
   display: block;
 }
@@ -78,6 +83,18 @@
 
   .carousel-control.left {
     left: -40px;
+  }
+}
+@media (min-width: 1200px) {
+  #myCarousel2.logo-carousel img {
+    width: auto;
+    height: 90px;
+    margin: 0px auto;
+  }
+  #myCarousel2.logo-carousel img.logo-wide {
+    width: auto;
+    height: 70px;
+    margin: 10px auto;
   }
 }
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
