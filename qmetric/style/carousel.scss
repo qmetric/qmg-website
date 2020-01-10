@@ -1,6 +1,20 @@
 @import "variables";
 
+// wide logo height: 62px
+// acg
+// review center
+// logo_european_business_awards_winner_2019
+// logo_insurance_awards_2019_commended
+// logo_ecommerce_awards_winner_2019
 
+// square logo height: 101px
+// 1000 companies
+// ica awards
+// logo_ones_to_watch_2019
+// logo_disruption50
+// logo_insurance_times_champion
+// logo_insurance_times_tech_silver
+// 
 
 .logo-item p {
 font-size: 16px;
@@ -22,11 +36,6 @@ line-height: 26px;
         width: auto;
         max-width: none;
         max-height: none;
-    }
-
-    img.logo-wide{
-        width: 75%;
-        height: auto;
     }
 
     p {
@@ -71,7 +80,7 @@ line-height: 26px;
     }
 }
 
-#myCarousel2.logo-carousel{
+#myCarousel.logo-carousel{
     img{
         width: auto;
         height: 70px;
@@ -80,9 +89,38 @@ line-height: 26px;
 
 
     img.logo-wide{
+        width: 75%;
+        height: auto;
+    }
+
+    // square
+    img.logo-wide-a{
+        height: 61px;
         width: auto;
-        height: 50px;
-        margin: 10px auto;
+        margin: 20px auto;
+    }
+
+    // acq
+    img.logo-wide-b{
+        height: 67px;
+        width: auto;
+        margin: 17px auto;
+    }
+
+    img.logo-square{
+        height: 101px;
+        width: auto;
+        margin: 0px auto;
+    }
+}
+
+@media (min-width: 768px){
+    #myCarousel2.logo-carousel{
+        img.logo-wide-b{
+            height: 47px;
+            width: auto;
+            margin: 27px auto;
+        } 
     }
 }
 
@@ -98,6 +136,42 @@ line-height: 26px;
     #myCarousel2{
         width: 90%;
         margin: 0 auto;
+        img{
+            width: auto;
+            height: 70px;
+            margin: 0px auto;
+        }   
+    
+        &.logo-carousel{
+            .logo-item{
+                padding:0;
+            }
+            p{
+                padding: 15px 10px;
+            }
+            img.logo-wide{
+                width: 75%;
+                height: auto;
+            }
+        
+            // square
+            img.logo-wide-a{
+                height: 61px;
+                width: auto;
+                margin: 20px auto;
+            }
+        
+            // acq
+
+        
+            img.logo-square{
+                height: 101px;
+                width: auto;
+                margin: 0px auto;
+            }
+        }
+    
+       
     }
    
     .carousel-control{
@@ -121,7 +195,11 @@ line-height: 26px;
             height: 90px;
             margin: 0px auto;
         }   
-    
+        img.logo-wide-b{
+            height: 67px;
+            width: auto;
+            margin: 17px auto;
+        }
     
         img.logo-wide{
             width: auto;
