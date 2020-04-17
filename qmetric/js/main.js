@@ -54,8 +54,9 @@
 
         if ($('.v-fail').length === 0) {
 
-            var stage = /uat/.test(window.location) ? "DEV" : "LIVE";
-            var URL = 'https://8w7pv6tfyj.execute-api.eu-west-1.amazonaws.com/' + stage + '/contact-us'
+            const stage = /www/.test(window.location) ? "live" : "uat";
+            const URL = `https://${stage}-contact-us.policyexpert.co.uk/contact-us`;
+            
             var data = {
                 name: $('#name').val(),
                 email: $('#email').val(),
