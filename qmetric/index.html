@@ -464,7 +464,7 @@
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 18,
-                center: new google.maps.LatLng(51.514532, -0.077710),
+                center: new google.maps.LatLng(51.516135, -0.080962),
                 mapTypeId: 'roadmap'
             });
 
@@ -477,7 +477,7 @@
 
             var features = [
                 {
-                    position: new google.maps.LatLng(51.514532, -0.077710),
+                    position: new google.maps.LatLng(51.516135, -0.080962),
                     type: 'building'
                 }
             ];
@@ -492,7 +492,7 @@
                 });
 
                 var infowindow = new google.maps.InfoWindow({ // Create a new InfoWindow
-                    content: "<div style='line-height: 20px;'><h3>QMetric Group</h3><p>32-38 Dukes Place, London, EC3A 7LP</p><a href='tel:0330 0600 600'><strong>0330 0600 600</strong></a><p>Mon-Fri: 9am - 6pm</p></div>" // HTML contents of the InfoWindow
+                    content: "<div style='line-height: 20px;'><h3>QMetric Group</h3><p>110 Bishopsgate, London, EC2N 4AY</p><a href='tel:0330 0600 600'><strong>0330 0600 600</strong></a><p>Mon-Fri: 9am - 6pm</p></div>" // HTML contents of the InfoWindow
                 });
                 google.maps.event.addListener(marker, 'click', function () { // Add a Click Listener to our marker
                     infowindow.open(map, marker); // Open our InfoWindow
@@ -510,7 +510,7 @@
     <div class="qm-loc">
         <h2><strong>QMetric Group</strong></h2>
 
-        <p>32-38 Dukes Place, London, EC3A 7LP</p>
+        <p>110 Bishopsgate, London, EC2N 4AY</p>
         <a class="o-btn" href="tel:03300600600 ">0330 0600 600 </a>
 
         <p>Mon-Fri: 9am - 6pm</p>
@@ -1041,9 +1041,9 @@ violation of fundamental human rights.
 
                     <p>Alternatively, you can write to us:</p>
                     QMetric Group Limited<br>
-                    32-38 Dukes Place<br>
-                    London<br>
-                    EC3A 7LP
+                    110 Bishopsgate,<br>
+                    London,<br>
+                    EC2N 4AY
                 </div>
                 <div class="modal-cont">
                     <h4>Privacy Policy changes</h4>
